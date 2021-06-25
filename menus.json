@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "5eee651f739f8c674fd736ea"
+  },
+  "name": "Hyderabadi Biryani",
+  "image": "dish13.png",
+  "price": "250",
+  "size": "small",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.\n"
+},{
+  "_id": {
+    "$oid": "5eee6671a27a66807cf2beab"
+  },
+  "name": "Muradabadi Biryani",
+  "image": "dish2.jpg",
+  "price": "400",
+  "size": "medium",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.\n"
+},{
+  "_id": {
+    "$oid": "5eee6692a27a66807cf2beac"
+  },
+  "name": "Thalassery Biryani",
+  "image": "dish3.jpg",
+  "price": "300",
+  "size": "small",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.\n"
+},{
+  "_id": {
+    "$oid": "5eee66a5a27a66807cf2bead"
+  },
+  "name": "Awadhi Biryani",
+  "image": "dish15.jpg",
+  "price": "500",
+  "size": "large",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.\n"
+},{
+  "_id": {
+    "$oid": "5eee66c4a27a66807cf2beae"
+  },
+  "name": "Bhatkali Biryani",
+  "image": "dish5.jpg",
+  "price": "350",
+  "size": "medium",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.\n"
+},{
+  "_id": {
+    "$oid": "5eee66cfa27a66807cf2beaf"
+  },
+  "name": "Tehari Biryani",
+  "image": "dish4.jpg",
+  "price": "200",
+  "size": "small",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.\n"
+}]

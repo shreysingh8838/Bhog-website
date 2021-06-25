@@ -1,0 +1,346 @@
+@import "./variable";
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karma:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: $dark;
+  background: $pure;
+}
+
+section.navigation {
+  nav li h1 {
+    color: $secondary;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  nav li a {
+    font-family: "Karma", serif;
+    font-size: 16px;
+    color: $primary-hover;
+    &:hover {
+      color: $secondary;
+    }
+    transition: $smooth;
+    font-weight: 600;
+  }
+  .logo {
+    font-family: "Karma", serif;
+    font-size: 24px;
+    color: $primary-hover;
+    font-weight: 600;
+  }
+
+  .logo span {
+    font-family: "Karma", serif;
+    font-size: 24px;
+    color: $secondary;
+    font-weight: 600;
+  }
+
+  .name {
+    font-family: "MB Grotesk", serif;
+    color: $primary-hover;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 100px;
+  }
+}
+
+section.hero {
+  background: $hero-back;
+  height: 600px;
+  h1 {
+    font-family: "Lobster Two", cursive;
+    font-size: 3rem;
+    color: $secondary;
+  }
+
+  button {
+    font-family: "Spartan", sans-serif;
+    background: $primary-hover;
+    transition: $smooth;
+    font-size: 15px;
+    &:hover {
+      background: $secondary;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .hero-image {
+    height: 560px;
+    max-width: 800px;
+  }
+}
+
+section.menu1 {
+  font-family: "Karma", serif;
+  h1 {
+    font-family: "Karma", serif;
+  }
+  img {
+    width: 336px;
+    height: 223.41px;
+  }
+  .dish-size {
+    background: $hero-back;
+    height: 400px;
+    font-size: 15px;
+  }
+  .btn {
+    font-family: "Spartan", sans-serif;
+    font-size: 12px;
+    background: $primary-hover;
+    transition: $smooth;
+    color: $pure;
+    &:hover {
+      background: $secondary;
+      color: $pure;
+    }
+    &:focus {
+      outline: none;
+      background: $primary-hover;
+      color: $pure;
+    }
+  }
+}
+
+section.cart {
+  font-family: "Karma", serif;
+  h1 {
+    font-family: "Karma", serif;
+  }
+  background: $hero-back;
+  .amount {
+    color: $primary-hover;
+  }
+  img {
+    border-radius: 30px;
+  }
+  button {
+    font-family: "Spartan", sans-serif;
+    background: $primary-hover;
+    transition: $smooth;
+    color: $pure;
+    font-size: 12px;
+    &:hover {
+      background: $secondary;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.cart-head {
+  border-bottom: 2px solid $primary-hover;
+}
+
+.order-list {
+  border-bottom: 2px solid $primary-hover;
+}
+
+section.login {
+  font-family: "Karma", serif;
+  background: $hero-back;
+  button {
+    font-family: "Spartan", sans-serif;
+    font-size: 12px;
+    background: $primary-hover;
+    transition: $smooth;
+    color: $pure;
+    &:hover {
+      background: $secondary;
+    }
+  }
+  a {
+    color: $primary-hover;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+/******************************************* List of orders to the customer*************************************************************************/
+
+section.orderslist {
+  background: $hero-back;
+  height: 600px;
+  h1 {
+    font-family: "Karma", serif;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  thead {
+    font-family: "Karma", serif;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+a.link {
+  color: $primary-hover;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+/******************************************* List of all orders to the admin*************************************************************************/
+
+section.adminorderslist {
+  background: $hero-back;
+  height: 100% h1 {
+    font-family: "Karma", serif;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  thead {
+    font-family: "Karma", serif;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+.link {
+  color: $secondary;
+}
+/******************************************* Notification - noty ******************************************************************/
+.noty_theme__mint {
+  margin-top: 3rem !important;
+  border-radius: 50px !important;
+  padding-left: 16px !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+/*********************************************************************************************************************************/
+
+section.footer {
+  background: var(--dark);
+}
+
+section.footer h1 {
+  background: $hero-back;
+  color: $dark;
+  text-align: center;
+  line-height: 1;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/************************************************************ Customer order status ********************************************************/
+section.status {
+  background: $hero-back;
+  min-height: calc(100vh - 86px);
+}
+.status-box {
+  padding: 60px 0 0;
+}
+.status-box ul {
+  margin-left: 84px;
+}
+.status-box ul li span {
+  position: relative;
+  padding-left: 20px;
+}
+// Dots
+.status-box ul li span:after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  background: $dark;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+// Icons
+.status-box ul li span:before {
+  font-family: "Line Awesome Free";
+  font-size: 46px;
+  font-weight: 600;
+  position: absolute;
+  left: -90px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+}
+.status-box ul li:nth-child(1) span:before {
+  content: "\f46c";
+}
+
+.status-box ul li:nth-child(2) span:before {
+  content: "\f560";
+}
+
+.status-box ul li:nth-child(3) span:before {
+  content: "\f818";
+}
+
+.status-box ul li:nth-child(4) span:before {
+  content: "\f0d1";
+}
+
+.status-box ul li:nth-child(5) span:before {
+  content: "\f582";
+}
+.status-box ul li {
+  position: relative;
+}
+// Line
+.status-box ul li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 2px;
+  height: 100%;
+  background: $dark;
+  margin-top: 10px;
+}
+// Last dot
+.status-box ul li:nth-child(5) span:after {
+  box-shadow: 0 0px 1px 1px;
+}
+
+// line
+.status-box ul li.step-completed:before {
+  background: $gray;
+}
+
+// dots
+.status-box ul li.step-completed span:after {
+  background: $gray;
+}
+
+// text
+.status-box ul li.step-completed span {
+  color: $gray;
+}
+
+// Current status
+.status-box ul li.current span {
+  color: $primary-hover;
+}
+
+.status-box ul li.current span:after {
+  background: $primary-hover;
+}
+
+.status-box ul li small {
+  float: right;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-right: 200px;
+}
