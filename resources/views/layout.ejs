@@ -28,21 +28,24 @@
                 <h1 class="logo px-10 text-2xl">Pahadi  <span class="logo text-2xl"> BHOG</span></h1>
             </div>  
             <div>
-                <ul class="u flex items-center">    
-                    <li class = "ml-12"><a href="/">Menu</a></li>
-                    <li class = "ml-12"><a href="/customers/orders">Orders History</a></li>
+                <ul class="u flex items-center">                
+                    <% if(user) { %>
+                    <li class = "ml-12"><a href="/customers/orders"> <span class="name-span"><%=user.name%>'s</span> Orders</a></li>
                     <form id="logout" action="/logout" method="POST">
                         <li class = "ml-12"><a onclick="document.getElementById('logout').submit()" href="#">Logout</a></li>
                     </form>
+                    <%} else{ %>
                     <li class = "ml-12"><a href="/register">Register</a></li>
                     <li class = "ml-12"><a href="/login">Login</a></li>
+                    <%}%>
+                    <li class = "ml-12"><a href="/">Menu</a></li>
+
                     <li class = "ml-12"> 
                         <a href="/cart">
                             <div class="ui labeled button" tabindex="0">
                                 <div class="ui orange button">
                                   <i class="shop icon"></i>
                                   <span>Cart</span>
-                                  
                                 </div>
                                 <span id="cartCounter" class="ui basic brown left pointing label">
                                     <%= session.cart ? session.cart.totalQty : '0' %>

@@ -12,12 +12,15 @@ const path = require('path');
 // Setting up the Port
 const PORT = process.env.PORT || 3300
 
-
 // Importing mongoose library
 const mongoose = require('mongoose');
 const session = require('express-session')
 const flash = require('express-flash')
 const MongoDbStore = require('connect-mongo')
+
+// Passport library
+const passport = require('passport')
+
 
 // Database connection
 mongoose.connect(process.env.MONGO_CONNECTION_URL, { useNewUrlParser: true, useCreateIndex:true, useUnifiedTopology: true, useFindAndModify : true });
@@ -40,6 +43,25 @@ app.use(session({
     cookie: { maxAge: 1000 * 60 * 60 * 24 } // 24 hour
 }))
 
+
+// Passport config
+const passportInit = require('./app/config/passport')
+passportInit(passport)
+app.use(passport.initialize())
+app.use(passport.session())
+
+
+
+
+//ASSETS for serving the static files
+app.use(express.static('public'));
+// URL encoded data are received from forms. So, to make express understand the response we use this middleware
+app.use(express.urlencoded({extended: false}))
+// to make the express understand the response is came into JSON
+app.use(express.json())
+
+
+
 // middleware
 app.use(flash())
 // Global middleware
@@ -50,12 +72,7 @@ app.use((req, res, next) => {
 })
 
 
-//ASSETS for serving the static files
-app.use(express.static('public'));
-app.use(express.urlencoded({extended: false}))
 
-// to make the express understand the response is came into JSON
-app.use(express.json())
 
 //SET TEMPLATE ENGINE for templating
 app.use(expresslayout);

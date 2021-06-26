@@ -44,13 +44,15 @@ section.navigation {
     color: $secondary;
     font-weight: 600;
   }
-
-  .name {
+  .name-span {
     font-family: "MB Grotesk", serif;
     color: $primary-hover;
     text-align: center;
     font-size: 24px;
     font-weight: 100px;
+    border-radius: 7px 7px 7px;
+    border: 2px solid $primary-hover;
+
   }
 }
 
