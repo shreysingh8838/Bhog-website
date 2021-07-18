@@ -1,0 +1,50 @@
+
+    <section class="hero py-12">
+        <div class="mx-auto flex items-center justify-between px-20">
+            <div class="hero-text w-1/2">
+                
+                <h6 class="px-20 text-2xl font-bold mb-6"> <em>Are you hungry?</em></h6>
+                <h1 class="px-20 text-4xl font-bold">Explore Our Lip Smacking Delicacies</h1>
+                <a href="/cart"><button class="px-8 button py-4 rounded-full text-white font-bold ml-48 mt-12" ><span>Order NOW</span></button></a>
+
+            </div>
+            <div class="w-1/2">
+                <img  class="hero-image px-4" src="/images/hero.jpg" alt="">
+            </div>
+        </div> 
+    </section>
+
+    <!--Final Menu with the grid with padding with everything .......Just have to add the card with values inside it-->
+
+    <section class="menu1 mx-auto ml-28 px-16 pt-16">
+        <h1 class="text-3xl font-bold mb-8"> Menu </h1>
+        <div class="grid grid-cols-3 col-gap-12 row-gap-16"> 
+            <%  items.forEach(function(item) { %>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg mb-24">
+                    <img class="w-336 h-223.4" src="/images/<%=item.image%>" alt="">
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-xl mb-2"><%=item.name%></div>
+                      <p class="text-gray-700 text-base"> <%=item.description%></p>
+                    </div>
+                    <div class=" pt-4 pb-2 text-center">
+                        <span class="dish-size px-20 py-1 rounded-full uppercase text-xs"> <%=item.size%></span>
+                        <div class="flex items-centers justify-around mt-6 mb-4">
+                            <span class="font-bold text-lg py-1"> ₹ <%=item.price%></span>
+                            <!-- data-item  attribute is very usefull to get the data of the selected item using data-set property in app.js-->
+                            <button data-item="<%=JSON.stringify(item)%>"  id = "add-to-cart" class="add-to-cart btn text-m">
+                                 <div class="ui btn button" tabindex="0">
+                                    Add to cart
+                                 </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+           <% })%>
+        </div>
+    </section>
+    <p class="text-center pb-16 text-gray-500 text-xs">
+        &copy;2021 Pahadi_BHOG. All rights reserved.
+    </p>
+
+
+
