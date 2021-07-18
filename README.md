@@ -1,13 +1,17 @@
 # Bhog-website
 
 (1)A webapp which connects authenticated user based on their preferences and allows to order food which will we stored in their order history for future.
-(2)Also some middlewares used were (connect-flash, express-session,
-mongoose, passport-local)
-(3) Added a admin pannel who can has the control of all the orders; and the order status can be updated as per (order placed, prepared, delivered, completed) 
+--
+(2)Also some middlewares used were (connect-flash, express-session,mongoose, passport-local).
+--
+(3) Added a admin pannel who can has the control of all the orders; and the order status can be updated as per (order placed, prepared, delivered, completed).
+--
 (4) Added socket.io to send real-time notifications about the order status to the customer.
+--
 (5) Integrated Stripe Payment Gateway and web application is in-process to be hosted on AWS.
+--
 (6) Built on tech-stack Nodejs, MongoDb, SASS, HTML5 and used Laravel-MIX as webpack bundler.
-
+--
 ---
 ## Requirements
 
