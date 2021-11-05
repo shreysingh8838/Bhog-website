@@ -30,7 +30,7 @@
             <div>
                 <ul class="u flex items-center">                
                     <% if(user) { %>
-                    <li class = "ml-12"><a href="/customers/orders"> <span class="name-span"><%=user.name%>'s</span> Orders</a></li>
+                    <li class = "ml-12"><a href="/customer/orders"> <span class="name-span"><%=user.name%>'s</span> Orders</a></li>
                     <form id="logout" action="/logout" method="POST">
                         <li class = "ml-12"><a onclick="document.getElementById('logout').submit()" href="#">Logout</a></li>
                     </form>

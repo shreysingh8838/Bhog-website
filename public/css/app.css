@@ -334,17 +334,36 @@ section.hero h1 {
   font-size: 3rem;
   color: #D48D34;
 }
-section.hero button {
-  font-family: "Spartan", sans-serif;
+section.hero .button {
+  border-radius: 2rem;
   background: #E36403;
-  transition: all 0.3s ease-in-out;
-  font-size: 15px;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  width: 180px;
+  cursor: pointer;
 }
-section.hero button:hover {
-  background: #D48D34;
+section.hero .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
-section.hero button:focus {
-  outline: none;
+section.hero .button span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+section.hero .button:hover span {
+  padding-right: 25px;
+}
+section.hero .button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 section.hero .hero-image {
   height: 560px;

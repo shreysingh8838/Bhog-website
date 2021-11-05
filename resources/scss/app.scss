@@ -65,17 +65,40 @@ section.hero {
     color: $secondary;
   }
 
-  button {
-    font-family: "Spartan", sans-serif;
+  .button {
+    border-radius: 2rem;
     background: $primary-hover;
-    transition: $smooth;
-    font-size: 15px;
-    &:hover {
-      background: $secondary;
-    }
-    &:focus {
-      outline: none;
-    }
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    width: 180px;
+    cursor: pointer;
+  }
+  
+  .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: .5s;
+  }
+
+  .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: .5s;
+  }
+
+  .button:hover span {
+  padding-right: 25px;
+  }
+
+  .button:hover span:after {
+  opacity: 1;
+  right: 0;
   }
 
   .hero-image {
